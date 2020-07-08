@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reading Interest Survey</title>
+</head>
+<body>
+  <header class="header">
+    <h1 id="title">Reading Interest Survey</h1>
+    <p id="description">Help us discover your next great read</p>
+  </header>
+ 
+  <form id="survey-form">
+    <div class="group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" class="basic-info" name="name" placeholder="Enter your name" required>
+    </div>
+    
+    <div class="group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" class="basic-info" name="email" placeholder="Enter your email" required>
+    </div>
+    
+    <div class="group">
+      <label for="number">Age:</label>
+      <input type="number" id="number" class="basic-info" name="age" placeholder="Age" min="10" max="99">
+    </div>
+    
+    <div class="group">
+      <p>What genres do you like? <span class="choose">(Choose all that apply.)</span></p>
+      
+      <input type="checkbox" id="biography" class="input-checkbox" name="biography" value="biography">
+      <label for="biography">Biography</label>
+      
+      <input type="checkbox" id="classics" class="input-checkbox" name="classics" value="classics">
+      <label for="classics">Classics/Literature</label>
+      
+      <input type="checkbox" id="fantasy" class="input-checkbox"
+      name="fantasy" value="fantasy">
+      <label for="fantasy">Fantasy</label>
+
+      <input type="checkbox" id="graphic" class="input-checkbox"
+      name="graphic" value="graphic">
+      <label for="graphic">Graphic Novels</label>
+      
+      <input type="checkbox" id="mystery" class="input-checkbox"
+      name="mystery" value="mystery">
+      <label for="mystery">Mystery, Thriller, and Crime</label>
+
+      <input type="checkbox" id="nonFiction" class="input-checkbox"
+      name="nonFiction" value="nonFiction">
+      <label for="nonFiction">Non-fiction</label>
+
+      <input type="checkbox" id="romance" class="input-checkbox"
+      name="romance" value="romance">
+      <label for="romance">Romance</label>
+
+      <input type="checkbox" id="sciFi" class="input-checkbox"
+      name="sciFi" value="sciFi">
+      <label for="sciFi">Science Fiction</label>
+
+      <input type="checkbox" id="westerns" class="input-checkbox"
+      name="westerns" value="westerns">
+      <label for="westerns">Westerns</label>
+    </div>
+
+    <div class="group">
+      <p>Which format do you prefer to read?</p>
+      <select name="format" id="dropdown" class="input-dropdown">
+        <option disabled selected>Select an option</option>
+        <option value="hardback">Hardback books</option>
+        <option value="paperback">Papberback books</option>
+        <option value="ebooks">eBooks</option>
+      </select>
+    </div>
+
+    <div class="group">
+      <p>If you read eBooks, where do you primarily get them from?</p>
+
+      <input type="radio" 
+      value="Amazon" id="company" class="input-radio" name="company">
+      <label for="company">Amazon</label>
+
+      <input type="radio" value="Apple" id="company" class="input-radio" name="company">
+      <label for="company">Apple iBooks</label>
+
+      <input type="radio" value="Google" id="company" class="input-radio" name="company">
+      <label for="company">Google Play</label>
+
+      <input type="radio" value="Kobo" id="company" class="input-radio" name="company">
+      <label for="company">Kobo</label>
+
+      <input type="radio" value="Nook" id="company" class="input-radio" name="company">
+      <label for="company">Nook</label>
+
+      <input type="radio" value="Sony" id="company" class="input-radio" name="company">
+      <label for="company">Sony</label>
+
+      <div class="group">
+        <p>Is there anything else you would like us to consider?</p>
+
+        <textarea name="message" class="input-message" cols="30" rows="10" placeholder="Enter your comment here."></textarea>
+      </div>
+
+      <div class="group">
+        <button type="submit" id="submit" class="submit-button">Submit</button>
+      </div>
+
+    </div>
+   
+  </form>
+</body>
+</html>
