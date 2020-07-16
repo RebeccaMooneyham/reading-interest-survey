@@ -4,100 +4,158 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Reading Interest Survey</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="header">
-    <h1 id="title">Reading Interest Survey</h1>
-    <p id="description">Help us discover your next great read</p>
-  </header>
- 
-  <form id="survey-form">
-    <div class="group">
-      <label for="name">Name:</label>
-      <input type="text" id="name" class="basic-info" name="name" placeholder="Enter your name" required>
-    </div>
-    
-    <div class="group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" class="basic-info" name="email" placeholder="Enter your email" required>
-    </div>
-    
-    <div class="group">
-      <label for="number">Age:</label>
-      <input type="number" id="number" class="basic-info" name="age" placeholder="Age" min="10" max="99">
-    </div>
-    
-    <div class="group">
-      <p>What genres do you like? <span class="choose">(Choose all that apply.)</span></p>
-      
-      <input type="checkbox" id="biography" class="input-checkbox" name="biography" value="biography">
-      <label for="biography">Biography</label>
-      
-      <input type="checkbox" id="classics" class="input-checkbox" name="classics" value="classics">
-      <label for="classics">Classics/Literature</label>
-      
-      <input type="checkbox" id="fantasy" class="input-checkbox"
-      name="fantasy" value="fantasy">
-      <label for="fantasy">Fantasy</label>
+  <main>
+    <header class="header">
+      <h1 id="title">Reading Interest Survey</h1>
+      <p id="description">Help us discover your next great read</p>
+    </header>
+  
+    <form id="survey-form">
+      <div class="basic-info-group">
+        <div class="group">
+          <label id="name-label" for="name">Name:</label>
+          <input type="text" id="name" class="basic-info" name="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="group">
+          <label id="email-label" for="email">Email:</label>
+          <input type="email" id="email" class="basic-info" name="email" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="group">
+          <label id="number-label" for="number">Age:</label>
+          <input type="number" id="number" class="basic-info" name="age" placeholder="Age" min="10" max="99">
+        </div>
+      </div>
 
-      <input type="checkbox" id="graphic" class="input-checkbox"
-      name="graphic" value="graphic">
-      <label for="graphic">Graphic Novels</label>
-      
-      <input type="checkbox" id="mystery" class="input-checkbox"
-      name="mystery" value="mystery">
-      <label for="mystery">Mystery, Thriller, and Crime</label>
+      <div class="group genres">
+        <p>What genres do you like? <span class="choose">(Choose all that apply.)</span></p>
+        
+        <div class="checkbox-group">
+          <label class="genre-box" for="biography">
+            <input type="checkbox" id="biography" class="input-checkbox" name="biography" value="biography">
+            <span class="checkmark1"></span>
+          Biography</label>
+        </div>
+         
+        <div class="checkbox-group"> 
+          <label class="genre-box" for="classics">
+            <input type="checkbox" id="classics" class="input-checkbox" name="classics" value="classics">
+            <span class="checkmark1"></span>
+          Classics/Literature</label>
+        </div>
 
-      <input type="checkbox" id="nonFiction" class="input-checkbox"
-      name="nonFiction" value="nonFiction">
-      <label for="nonFiction">Non-fiction</label>
+        <div class="checkbox-group">   
+          <label class="genre-box" for="fantasy">
+            <input type="checkbox" id="fantasy" class="input-checkbox" name="fantasy" value="fantasy">
+            <span class="checkmark1"></span>
+          Fantasy</label>
+        </div>
+        
+        <div class="checkbox-group">
+          <label class="genre-box" for="graphic">
+            <input type="checkbox" id="graphic" class="input-checkbox" name="graphic" value="graphic">
+            <span class="checkmark1"></span>
+          Graphic Novels</label>
+        </div>  
 
-      <input type="checkbox" id="romance" class="input-checkbox"
-      name="romance" value="romance">
-      <label for="romance">Romance</label>
+        <div class="checkbox-group">
+          <label class="genre-box" for="mystery">
+            <input type="checkbox" id="mystery" class="input-checkbox" name="mystery" value="mystery">
+            <span class="checkmark1"></span>
+          Mystery, Thriller, and Crime</label>
+        </div>
+        
+        <div class="checkbox-group">
+          <label class="genre-box" for="nonFiction">
+            <input type="checkbox" id="nonFiction" class="input-checkbox" name="nonFiction" value="nonFiction">
+            <span class="checkmark1"></span>
+          Non-fiction</label>
+        </div>
+        
+        <div class="checkbox-group">
+          <label class="genre-box" for="romance">
+            <input type="checkbox" id="romance" class="input-checkbox" name="romance" value="romance">
+            <span class="checkmark1"></span>
+          Romance</label>
+        </div>
 
-      <input type="checkbox" id="sciFi" class="input-checkbox"
-      name="sciFi" value="sciFi">
-      <label for="sciFi">Science Fiction</label>
+        <div class="checkbox-group">  
+          <label class="genre-box" for="sciFi">
+            <input type="checkbox" id="sciFi" class="input-checkbox" name="sciFi" value="sciFi">
+            <span class="checkmark1"></span>
+          Science Fiction</label>
+        </div>
+        
+        <div class="checkbox-group">
+          <label class="genre-box" for="westerns">
+            <input type="checkbox" id="westerns" class="input-checkbox" name="westerns" value="westerns">
+            <span class="checkmark1"></span>
+          Westerns</label>
+        </div> 
+      </div>
 
-      <input type="checkbox" id="westerns" class="input-checkbox"
-      name="westerns" value="westerns">
-      <label for="westerns">Westerns</label>
-    </div>
+      <div class="group format">
+        <p>Which format do you prefer to read?</p>
+        <select name="format" id="dropdown" class="input-dropdown">
+          <option disabled selected>Select an option</option>
+          <option value="hardback">Hardback books</option>
+          <option value="paperback">Papberback books</option>
+          <option value="ebooks">eBooks</option>
+        </select>
+      </div>
 
-    <div class="group">
-      <p>Which format do you prefer to read?</p>
-      <select name="format" id="dropdown" class="input-dropdown">
-        <option disabled selected>Select an option</option>
-        <option value="hardback">Hardback books</option>
-        <option value="paperback">Papberback books</option>
-        <option value="ebooks">eBooks</option>
-      </select>
-    </div>
+      <div class="group ebooks">
+        <p>If you read eBooks, where do you primarily get them from?</p>
 
-    <div class="group">
-      <p>If you read eBooks, where do you primarily get them from?</p>
+        <div class="radio-group">
+          <label class="ebook-radio">
+            <input type="radio" value="Amazon" class="input-radio" name="company">
+            <span class="checkmark2"></span>
+          Amazon</label>
+        </div>
 
-      <input type="radio" 
-      value="Amazon" id="company" class="input-radio" name="company">
-      <label for="company">Amazon</label>
+        <div class="radio-group">
+          <label class="ebook-radio">
+            <input type="radio" value="Apple" class="input-radio" name="company">
+            <span class="checkmark2"></span>
+          Apple iBooks</label>
+        </div>       
 
-      <input type="radio" value="Apple" id="company" class="input-radio" name="company">
-      <label for="company">Apple iBooks</label>
+        <div class="radio-group">
+          <label class="ebook-radio">
+            <input type="radio" value="Google" class="input-radio" name="company">
+            <span class="checkmark2"></span>
+          Google Play</label>
+        </div>
+        
+        <div class="radio-group">
+          <label class="ebook-radio">
+            <input type="radio" value="Kobo" class="input-radio" name="company">
+            <span class="checkmark2"></span>
+          Kobo</label>
+        </div>
+        
+        <div class="radio-group">
+          <label class="ebook-radio">
+            <input type="radio" value="Nook" class="input-radio" name="company">
+            <span class="checkmark2"></span>
+          Nook</label>
+        </div>
 
-      <input type="radio" value="Google" id="company" class="input-radio" name="company">
-      <label for="company">Google Play</label>
-
-      <input type="radio" value="Kobo" id="company" class="input-radio" name="company">
-      <label for="company">Kobo</label>
-
-      <input type="radio" value="Nook" id="company" class="input-radio" name="company">
-      <label for="company">Nook</label>
-
-      <input type="radio" value="Sony" id="company" class="input-radio" name="company">
-      <label for="company">Sony</label>
-
-      <div class="group">
+        <div class="radio-group">
+          <label class="ebook-radio">
+            <input type="radio" value="Sony" class="input-radio" name="company">
+            <span class="checkmark2"></span>
+          Sony</label>
+        </div>
+      </div>
+     
+      <div class="group extra-info">
         <p>Is there anything else you would like us to consider?</p>
 
         <textarea name="message" class="input-message" cols="30" rows="10" placeholder="Enter your comment here."></textarea>
@@ -106,9 +164,8 @@
       <div class="group">
         <button type="submit" id="submit" class="submit-button">Submit</button>
       </div>
-
-    </div>
-   
-  </form>
+    
+    </form>
+  </main>
 </body>
 </html>

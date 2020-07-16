@@ -1,0 +1,283 @@
+/* --- Base Styles --- */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,.6) 0%, rgba(148,187,233,.6) 100%); 
+  font-family: 'Kanit', sans-serif;
+  font-weight: 400; 
+}
+main {
+  width: 80%;
+  margin: auto;
+}
+
+/* --- Header --- */
+.header {
+  margin: 1.5em 0;
+  text-align: center;
+}
+h1 {
+  letter-spacing: 1px;
+  line-height: 98%;
+  color: #2E1F87;
+  font-size: 2.25em;
+}
+.header p {
+  font-style: italic;
+  font-size: 1.35em;
+}
+
+/* --- General Form Styling --- */
+.group p {
+  font-size: 1.5em;
+  padding-bottom: .5em;
+  line-height: 99%;
+}
+
+/* --- Name, Email, Age Styling ---*/
+.basic-info {
+  display: block;
+  margin-bottom: .95em;
+  padding-left: 8px;
+  width: 100%; 
+  height: 40px;
+  font-size: 1.1em;
+  border-radius: 4px;
+  border: 1px solid #333;
+}
+.basic-info-group label {
+  font-size: 1.5em;
+}
+.basic-info-group {
+  padding-bottom: 1em;
+}
+
+/* --- Basic Checkbox, Dropdown, and Radio Styling ---*/
+.genres,
+.format,
+.ebooks
+{
+  margin-bottom: 2em;
+}
+label {
+  font-size: 1.2em;
+}
+input:focus, textarea:focus, select:focus {
+  outline-color: #2E1F87;
+}
+
+ /* --- Base styles for checkboxes --- */
+ .choose {
+  display: block;
+  font-size: .85em;
+  font-style: italic;
+}
+ .checkbox-group {
+  display: block;
+  position: relative;
+  padding-left: 1.65em;
+  cursor: pointer;
+  font-size: 1.25em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* --- Hide browser's default checkbox --- */
+.checkbox-group input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* --- My custom checkbox --- */
+.checkmark1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-top: 6px;
+}
+
+/* --- Add background color on hover --- */
+.genre-box:hover input ~ .checkmark1 {
+  background-color:  rgba(238,174,202,.5);
+}
+
+/* --- Add background when the checkbox is checked --- */
+.genre-box input:checked ~ .checkmark1 {
+  background-color: #2E1F87;
+  border: none;
+}
+
+/* --- Create the checkmark/indicator (hidden when not checked) --- */
+.checkmark1:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* --- Show the checkmark when checked --- */
+.genre-box input:checked ~ .checkmark1:after {
+  display: block;
+}
+
+/* --- Style the checkmark/indicator --- */
+.genre-box .checkmark1:after {
+  left: 9px;
+  top: 5px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* --- Selection Styling --- */
+ .input-dropdown {
+   width: 100%;
+   height: 40px;
+   font-size: 1.1em;
+   padding-left: 8px;
+   border-radius: 5px;
+ }
+
+ /* Base styles for radio buttons */
+.radio-group {
+  display: block;
+  position: relative;
+  padding-left: 1.65em;
+  cursor: pointer;
+  font-size: 1.25em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide browser's default radio button */
+.ebook-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* My custom radio button */
+.checkmark2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-top: 6px;
+  border-radius: 50%;
+}
+
+/* Add background color on hover */
+.ebook-radio:hover input ~ .checkmark2 {
+  background-color: rgba(238,174,202,.5);
+}
+
+/* Add background when the radio button is checked */
+.ebook-radio input:checked ~ .checkmark2 {
+  background-color: #2E1F87;
+  border: none;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark2:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.ebook-radio input:checked ~ .checkmark2:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.ebook-radio .checkmark2:after {
+  top: 8px;
+  left: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+ /* --- Textarea Styling --- */
+ textarea::placeholder {
+  font-size: 1.25em;
+}
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 4px 8px;
+  border-radius: 5px;
+  background-color: #f4f6f9;
+  border: 1px solid #f4f6f9;
+  margin-bottom: 2em;
+}
+
+/* --- Submit Button Styling --- */
+ .submit-button {
+    display: block;
+    margin: .75em 0 2.5em;
+    font-size: 1.35em; 
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 2.5em;
+    color: #fff;
+    font-weight: 600;
+    height: 2.5em; 
+    width: 100%;
+    background: #2E1F87; 
+    border: 1px solid #2E1F87;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: .5s;
+ }
+button:hover {
+  background-color: rgba(238,174,202,.5);
+  border: 1px solid rgba(238,174,202,.5);
+  color: #5D5D5D;
+}
+
+/* --- Media Queries --- */
+
+/* --- Medium devices - 768px and up ---*/
+@media only screen and (min-width: 768px) {
+  body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,.9) 0%, rgba(148,187,233,.9) 100%); 
+  }
+  main {
+    width: 50%;
+    background-color: rgba(256,256,256,.2);
+    padding: 1.5em;
+  }
+}
+
+/* --- Medium devices - 992px and up ---*/
+@media only screen and (min-width: 992px) {
+  main {
+    max-width: 1000px;
+  }
+}
